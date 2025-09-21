@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Weather App</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div>
+      <img src="./assets/images/logo.svg" alt="Logo" />
+    </div>
+    <button class="navBtn">
+      <img src="./assets/images/icon-units.svg" alt="Units" />
+      Units
+      <img src="./assets/images/icon-dropdown.svg" alt="Dropdown" />
+    </button>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>How's the sky looking today?</h1>
+    <div class="searchBox">
+      <div class="inputWrapper">
+        <img src="./assets/images/icon-search.svg" alt="Search" class="searchIcon" />
+        <input id="searchInput" type="text" placeholder="Search for a place..." />
+      </div>
+      <button id="searchBtn">Search</button>
+    </div>
+  </header>
+
+  <!-- Main Weather Content -->
+  <main class="weatherContainer">
+    <!-- LEFT SIDE -->
+    <div class="leftContent">
+      <!-- Weather Card -->
+      <section class="weatherCard" style="background-image: url(./assets/images/bg-today-large.svg);">
+        <div class="location">
+          <h2 id="cityName">Berlin, Germany</h2>
+          <p id="date">Tuesday, Aug 5, 2025</p>
+        </div>
+        <div class="temperature">
+          <img id="weatherIcon" src="./assets/images/icon-sunny.webp" alt="Sunny" />
+          <span id="temperature">20°</span>
+        </div>
+      </section>
+
+      <!-- Weather Details -->
+      <section class="weatherStats">
+        <div>Feels Like <br><span id="feelsLike">18°</span></div>
+        <div>Humidity <br><span id="humidity">46%</span></div>
+        <div>Wind <br><span id="wind">14 km/h</span></div>
+        <div>Precipitation <br><span id="precipitation">0 mm</span></div>
+      </section>
+
+      <!-- Daily Forecast -->
+      <section id="dailyForecast" class="dailyForecast">
+        <!-- dynamically filled -->
+      </section>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <aside class="hourlyForecast">
+      <h3>Hourly Forecast</h3>
+      <div id="hourlyList" class="hourlyList">
+        <!-- dynamically filled -->
+      </div>
+    </aside>
+  </main>
+
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
